@@ -365,6 +365,199 @@ n and m
 
 #     print()
 
+
+"""
+n = 3
+# (n * (n-i)) - i
+i = 0 : (3 * 3) - 0 = 9
+i = 1 : (3 * 2) - 1 = 5
+
+
+*         * 
+* *     * * 
+* * * * * * 
+* *     * *
+*         *
+"""
+
+# n = int(input("Enter a number : "))
+# for i in range(n):
+#     for j in range(i+1):
+#         print("*", end=" ")
+
+#     #!TODO SPACE LOGIC IMPLEMENTATION
+
+#     for j in range(i+1):
+#         print("*", end=" ")
+#     print()
+
+
+
+# ------------------------------------
+
+
+"""
+1 1 1 1
+2 2 2 2
+3 3 3 3
+4 4 4 4
+5 5 5 5
+"""
+# for i in range(1, 5):
+#     for j in range(1, 5):
+#         print(i, end=" ")
+#     print()
+
+"""
+1 2 3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+"""
+# for i in range(4):
+#     for j in range(1, 5):
+#         print(j, end=" ")
+#     print()
+
+"""
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+"""
+
+# for i in range(1, 6):
+#     for j in range(1, i+1):
+#         print(j, end=" ")
+#     print()
+
+
+""" 
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+"""
+# for i in range(1, 6):
+#     for j in range(1, i+1):
+#         print(i, end=" ")
+#     print()
+
+"""
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+"""
+# for i in range(5, 0, -1):
+#     for j in range(1, i+1):
+#         print(j, end=" ")
+#     print()
+
+""" 
+5 5 5 5 5
+4 4 4 4
+3 3 3
+2 2
+1
+"""
+# for i in range(5, 0, -1):
+#     for j in range(1, i+1):
+#         print(i, end=" ")
+#     print()
+
+
+""" 
+Floyd's Triangle Problem
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+"""
+
+# counter = 1
+# for i in range(1, 6):
+#     for j in range(1, i+1):
+#         print(counter, end=" ")
+#         counter += 1
+#     print()
+
+"""
+1
+2 1
+3 2 1
+4 3 2 1
+5 4 3 2 1
+"""
+# for i in range(1, 6):
+#     for j in range(i, 0, -1):
+#         print(j, end=" ")
+#     print()
+
+
+"""
+    1
+   1 2
+  1 2 3
+ 1 2 3 4
+1 2 3 4 5
+"""
+# for i in range(1, 6):
+#     print(" " * (5-i), end="")
+#     for j in range(1, i+1):
+#         print(j, end=" ")
+#     print()
+
+"""
+    1
+   121
+  12321
+ 1234321
+123454321
+"""
+# for i in range(1, 6):
+#     print(" " * (5-i), end="")
+#     for j in range(1, i+1):
+#         print(j, end="")
+    
+#     for j in range(i-1, 0, -1):
+#         print(j, end="")
+
+#     print()
+
+
+# ------------------------------------
+
+# Two-Number-Sum | Two Sum
+
+""" 
+nums = [1, 2, 3, 4, 5]
+
+target = 7
+
+indexes i and j which satisfy this rule nums[i] + nums[j] = target
+indexes should be different and return any combination
+
+indices     0   1   2   3   4
+           -------------------
+nums        1   2   3   4   5
+            i   j   
+
+pairs = (2, 5)
+pairs = (3, 4)
+"""
+nums = [1, 2, 3, 4, 5]
+target = int(input("Input Target : "))
+
+for i in range(0, len(nums)):
+    for j in range(i+1, len(nums)):
+        if target == nums[i] + nums[j]:
+            print(f"pairs = ({i}, {j})")
+
 # ------------------------------------
 
 # list1 = [
@@ -373,14 +566,9 @@ n and m
 #     [7, 8, 9]
 # ]
 
-# for i in range(3): # 0, 1, 2
-#     for j in range(3): # 0, 1, 2
+# for i in range(len(list1)): # 0, 1, 2
+#     for j in range(len(list1[i])): # 0, 1, 2
 #         print("Item :", list1[i][j])
-
-# for i in range(3):
-#     for j in range(3):
-#         print(list1[i][j], end=" ")
-#     print()
 
 """ 
 1 2 3
@@ -396,3 +584,5 @@ Item : 4
 ....
 Item : 9
 """
+
+
